@@ -3,26 +3,31 @@ package com.acme.a3csci3130;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class DetailViewActivity extends Activity {
 
-    private EditText nameField, emailField;
-    Contact receivedPersonInfo;
+    private EditText nameField, address, province,primaryBuisness,buisnessNumber;
+    BuisnessData entryInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_view);
-        receivedPersonInfo = (Contact)getIntent().getSerializableExtra("Contact");
+        entryInfo = (BuisnessData) getIntent().getSerializableExtra("BuisnessData");
 
         nameField = (EditText) findViewById(R.id.name);
-        emailField = (EditText) findViewById(R.id.email);
+        address = (EditText) findViewById(R.id.address);
+        buisnessNumber = (EditText) findViewById(R.id.buisnessNumber);
+        province = (EditText) findViewById(R.id.province);
+        primaryBuisness = (EditText) findViewById(R.id.primarybuisness);
 
-        if(receivedPersonInfo != null){
-            nameField.setText(receivedPersonInfo.name);
-            emailField.setText(receivedPersonInfo.email);
+        if(entryInfo != null){
+            nameField.setText(entryInfo.name);
+            address.setText(entryInfo.address);
+            buisnessNumber.setText(entryInfo.businessNumber);
+            province.setText(entryInfo.provinceOrTerritory);
+            primaryBuisness.setText(entryInfo.primaryBusiness);
         }
     }
 
