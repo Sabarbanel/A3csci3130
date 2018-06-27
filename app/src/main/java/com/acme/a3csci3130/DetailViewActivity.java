@@ -14,7 +14,11 @@ public class DetailViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_view);
+        // when you select a name, it searches it up and populates the fields to that you can modify them
         entryInfo = (BuisnessData) getIntent().getSerializableExtra("BuisnessData");
+
+        BuisnessData entry = (BuisnessData) firebaseAdapter.getItem(position);
+
 
         nameField = (EditText) findViewById(R.id.name);
         address = (EditText) findViewById(R.id.address);
@@ -33,10 +37,12 @@ public class DetailViewActivity extends Activity {
 
     public void updateContact(View v){
         //TODO: Update contact funcionality
+
     }
 
     public void eraseContact(View v)
     {
-        //TODO: Erase contact functionality
+        Firebase firebase=new Firebase("..address..");
+        firebase.child(id).removeValue();
     }
 }

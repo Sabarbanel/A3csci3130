@@ -30,8 +30,6 @@ public class CreateBuisnessDataAcitivity extends Activity {
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String entryID = appState.firebaseReference.push().getKey();
-        String name = nameField.getText().toString();
-        String addressval = address.getText().toString();
         BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString());
 
         appState.firebaseReference.child(entryID).setValue(entry);

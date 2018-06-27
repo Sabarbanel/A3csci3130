@@ -27,7 +27,7 @@ public class BuisnessData implements Serializable {
         }
         catch(Exception nonIntEntry)
         {
-            //do I throw an eexception here, or will firebase parse an int for me?
+            //do I throw an exception here, or will firebase parse an int for me?
             this.businessNumber=-1;
         }
         this.name = name;
