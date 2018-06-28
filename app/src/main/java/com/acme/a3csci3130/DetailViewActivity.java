@@ -17,7 +17,6 @@ public class DetailViewActivity extends Activity {
         // when you select a name, it searches it up and populates the fields to that you can modify them
         entryInfo = (BuisnessData) getIntent().getSerializableExtra("BuisnessData");
 
-        BuisnessData entry = (BuisnessData) firebaseAdapter.getItem(position);
 
 
         nameField = (EditText) findViewById(R.id.name);
@@ -42,7 +41,6 @@ public class DetailViewActivity extends Activity {
 
     public void eraseContact(View v)
     {
-        Firebase firebase=new Firebase("..address..");
-        firebase.child(id).removeValue();
+
     }
 }

@@ -15,21 +15,16 @@ import java.util.Objects;
 
 public class BuisnessData implements Serializable {
 
-    public int businessNumber;
+    public String businessNumber;
     public String name;
     public String primaryBusiness;
     public String address;
     public String provinceOrTerritory;
 
     public BuisnessData(String businessNumber, String name, String primaryBusiness, String address, String provinceOrTerritory) {
-        try{
-            this.businessNumber = Integer.parseInt(businessNumber);
-        }
-        catch(Exception nonIntEntry)
-        {
-            //do I throw an exception here, or will firebase parse an int for me?
-            this.businessNumber=-1;
-        }
+
+            this.businessNumber = businessNumber;
+
         this.name = name;
         this.primaryBusiness = primaryBusiness;
         this.address = address;
