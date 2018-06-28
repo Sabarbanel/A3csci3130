@@ -36,7 +36,7 @@ public class ExampleInstrumentedTest extends MyApplicationData {
     @Test
     public void createEntryFirebase()
     {
-        onView(withId(R.id.submitButtonn)).perform(click());
+        onView(withId(R.id.submitButton)).perform(click());
         onView(withId(R.id.province)).perform(typeText("NS"));
         onView(withId(R.id.primarybuisness)).perform(typeText("fisher"));
         onView(withId(R.id.buisnessnNumber)).perform(typeText("123456789"));
@@ -72,7 +72,7 @@ public class ExampleInstrumentedTest extends MyApplicationData {
     {
         onData(anything()).inAdapterView(withId(R.id.listView)).atPosition(0).perform(click());
         onView(withId(R.id.province)).check(matches(withText("This password is too weak")));
-        onView(withId(R.id.submitButtonn)).perform(click());
+        onView(withId(R.id.submitButton)).perform(click());
         onView(withId(R.id.province)).check(matches(withText("BC")));
         onView(withId(R.id.primarybuisness)).check(matches(withText("fisher")));
         onView(withId(R.id.buisnessnNumber)).check(matches(withText("123456789")));
@@ -100,7 +100,7 @@ public class ExampleInstrumentedTest extends MyApplicationData {
             onData(anything()).inAdapterView(withId(R.id.listView)).atPosition(0).perform(click());
 
             onView(withId(R.id.province)).check(matches(withText("This password is too weak")));
-            onView(withId(R.id.submitButtonn)).perform(click());
+            onView(withId(R.id.submitButton)).perform(click());
             onView(withId(R.id.province)).check(matches(withText("BC")));
             onView(withId(R.id.primarybuisness)).check(matches(withText("fisher")));
             onView(withId(R.id.buisnessnNumber)).check(matches(withText("123456789")));

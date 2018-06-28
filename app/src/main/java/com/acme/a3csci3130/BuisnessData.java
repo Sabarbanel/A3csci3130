@@ -24,6 +24,8 @@ public class BuisnessData implements Serializable {
 
     public BuisnessData(String businessNumber, String name, String primaryBusiness, String address, String provinceOrTerritory, String entryID) {
 
+
+
             this.businessNumber = businessNumber;
 
         this.name = name;
