@@ -20,8 +20,9 @@ public class BuisnessData implements Serializable {
     public String primaryBusiness;
     public String address;
     public String provinceOrTerritory;
+    public String entryID;
 
-    public BuisnessData(String businessNumber, String name, String primaryBusiness, String address, String provinceOrTerritory) {
+    public BuisnessData(String businessNumber, String name, String primaryBusiness, String address, String provinceOrTerritory, String entryID) {
 
             this.businessNumber = businessNumber;
 
@@ -29,6 +30,7 @@ public class BuisnessData implements Serializable {
         this.primaryBusiness = primaryBusiness;
         this.address = address;
         this.provinceOrTerritory = provinceOrTerritory;
+        this.entryID=entryID;
     }
 
 

@@ -22,7 +22,7 @@ public class CreateBuisnessDataAcitivity extends Activity {
         submitButton = (Button) findViewById(R.id.submitButton);
         nameField = (EditText) findViewById(R.id.name);
         address = (EditText) findViewById(R.id.address);
-        buisnessNumber = (EditText) findViewById(R.id.buisnessNumber);
+        buisnessNumber = (EditText) findViewById(R.id.buisnessnNumber);
         province = (EditText) findViewById(R.id.province);
         primaryBuisness = (EditText) findViewById(R.id.primarybuisness);
     }
@@ -30,7 +30,7 @@ public class CreateBuisnessDataAcitivity extends Activity {
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String entryID = appState.firebaseReference.push().getKey();
-        BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString());
+        BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString(),entryID);
 
         appState.firebaseReference.child(entryID).setValue(entry);
 
