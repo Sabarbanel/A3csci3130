@@ -29,23 +29,22 @@
         android:layout_marginStart="8dp" />
 
 
-
     <EditText
         android:id="@+id/buisnessnNumber"
-        android:layout_width="380dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Buisness Number"
+        android:hint="Business Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/province" />
 
     <EditText
         android:id="@+id/province"
-        android:layout_width="380dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -59,13 +58,15 @@
 
     <EditText
         android:id="@+id/primarybuisness"
-        android:layout_width="380dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Primary Buisness"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buisnessnNumber" />
 
@@ -88,7 +89,7 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="8dp"
         android:onClick="eraseContact"
-        android:text="Erase Contact"
+        android:text="Erase Entry"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/primarybuisness" />
 

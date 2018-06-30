@@ -31,7 +31,6 @@ public class CreateBuisnessDataAcitivity extends Activity {
         //each entry needs a unique ID
         String entryID = appState.firebaseReference.push().getKey();
         BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString(),entryID);
-
         appState.firebaseReference.child(entryID).setValue(entry);
 
         finish();
