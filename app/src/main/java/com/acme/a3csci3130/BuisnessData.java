@@ -25,14 +25,13 @@ public class BuisnessData implements Serializable {
     public BuisnessData(String businessNumber, String name, String primaryBusiness, String address, String provinceOrTerritory, String entryID) {
 
 
-
-            this.businessNumber = businessNumber;
+        this.businessNumber = businessNumber;
 
         this.name = name;
         this.primaryBusiness = primaryBusiness;
         this.address = address;
         this.provinceOrTerritory = provinceOrTerritory;
-        this.entryID=entryID;
+        this.entryID = entryID;
     }
 
 
@@ -46,5 +45,5 @@ public class BuisnessData implements Serializable {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
-    }
+}
 

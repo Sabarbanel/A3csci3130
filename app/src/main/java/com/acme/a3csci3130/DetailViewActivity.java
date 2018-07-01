@@ -7,7 +7,7 @@ import android.widget.EditText;
 
 public class DetailViewActivity extends Activity {
 
-    public EditText nameField, address, province,primaryBuisness,buisnessNumber;
+    public EditText nameField, address, province, primaryBuisness, buisnessNumber;
     BuisnessData entryInfo;
     private MyApplicationData appState;
 
@@ -20,7 +20,6 @@ public class DetailViewActivity extends Activity {
         appState = ((MyApplicationData) getApplicationContext());
 
 
-
         nameField = (EditText) findViewById(R.id.name);
         address = (EditText) findViewById(R.id.address);
         buisnessNumber = (EditText) findViewById(R.id.buisnessnNumber);
@@ -28,7 +27,7 @@ public class DetailViewActivity extends Activity {
         primaryBuisness = (EditText) findViewById(R.id.primarybuisness);
 //what I learned is that this part isn't working period
 
-        if(entryInfo != null){
+        if (entryInfo != null) {
             nameField.setText(entryInfo.name);
             address.setText(entryInfo.address);
             buisnessNumber.setText(entryInfo.businessNumber);
@@ -37,9 +36,9 @@ public class DetailViewActivity extends Activity {
         }
     }
 
-    public void updateContact(View v){
+    public void updateContact(View v) {
         //TODO: Update contact funcionality
-        BuisnessData updatedEntry = new BuisnessData( buisnessNumber.getText().toString(),  nameField.getText().toString(),  primaryBuisness.getText().toString(),  address.getText().toString(), province.getText().toString(), entryInfo.entryID);
+        BuisnessData updatedEntry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString(), entryInfo.entryID);
         appState.firebaseReference.child(entryInfo.entryID).setValue(updatedEntry);
 
 

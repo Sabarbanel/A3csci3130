@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //Get the app wide shared variables
-        MyApplicationData appData = (MyApplicationData)getApplication();
+        MyApplicationData appData = (MyApplicationData) getApplication();
 
         //Set-up Firebase
         appData.firebaseDBInstance = FirebaseDatabase.getInstance();
@@ -33,11 +33,11 @@ public class MainActivity extends Activity {
         contactListView = (ListView) findViewById(R.id.listView);
 
         //Set up the List View
-       firebaseAdapter = new FirebaseListAdapter<BuisnessData>(this, BuisnessData.class,
+        firebaseAdapter = new FirebaseListAdapter<BuisnessData>(this, BuisnessData.class,
                 android.R.layout.simple_list_item_1, appData.firebaseReference) {
             @Override
             protected void populateView(View v, BuisnessData model, int position) {
-                TextView Name = (TextView)v.findViewById(android.R.id.text1);
+                TextView Name = (TextView) v.findViewById(android.R.id.text1);
                 Name.setText(model.name);
             }
         };
@@ -52,19 +52,16 @@ public class MainActivity extends Activity {
         });
     }
 
-    public void createContactButton(View v)
-    {
-        Intent intent=new Intent(this, CreateBuisnessDataAcitivity.class);
+    public void createContactButton(View v) {
+        Intent intent = new Intent(this, CreateBuisnessDataAcitivity.class);
         startActivity(intent);
     }
 
-    private void showDetailView(BuisnessData entry)
-    {
+    private void showDetailView(BuisnessData entry) {
         Intent intent = new Intent(this, DetailViewActivity.class);
         intent.putExtra("BuisnessData", entry);
         startActivity(intent);
     }
-
 
 
 }

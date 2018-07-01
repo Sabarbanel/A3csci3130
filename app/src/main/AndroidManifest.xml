@@ -23,7 +23,8 @@
         <activity
             android:name=".DetailViewActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".CreateBuisnessDataAcitivity"
+        <activity
+            android:name=".CreateBuisnessDataAcitivity"
             android:parentActivityName=".MainActivity" />
     </application>
 

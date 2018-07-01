@@ -10,20 +10,15 @@
         "businessNumber": {
           ".validate": "newData.isString() && newData.val().matches(/^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/)"
         },
-
         "provinceOrTerritory": {
           ".validate": "newData.isString() && newData.val().matches(/^AB|BC|MB| NB|NL|NS|NT|NU|ON|PE|QC|SK|YT|\\s$/i) || newData.val().length ==0"
         },
-
         "primaryBusiness": {
           ".validate": "newData.isString() && newData.val().matches(/^Fisher| Distributor|Processor|Fish Monger$/i)"
         },
-
         "address": {
           ".validate": "newData.isString() && newData.val().length < 50"
         }
-
-
       }
     }
   }

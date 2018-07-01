@@ -9,7 +9,7 @@ import android.widget.EditText;
 public class CreateBuisnessDataAcitivity extends Activity {
 
     private Button submitButton;
-    private EditText nameField, address, province,primaryBuisness,buisnessNumber;
+    private EditText nameField, address, province, primaryBuisness, buisnessNumber;
     private MyApplicationData appState;
 
     @Override
@@ -30,7 +30,7 @@ public class CreateBuisnessDataAcitivity extends Activity {
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String entryID = appState.firebaseReference.push().getKey();
-        BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString(),entryID);
+        BuisnessData entry = new BuisnessData(buisnessNumber.getText().toString(), nameField.getText().toString(), primaryBuisness.getText().toString(), address.getText().toString(), province.getText().toString(), entryID);
         appState.firebaseReference.child(entryID).setValue(entry);
 
         finish();
